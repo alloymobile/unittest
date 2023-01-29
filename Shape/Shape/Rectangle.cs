@@ -12,8 +12,16 @@ namespace Shape
         double width;
         public Rectangle(double length, double width)
         {
-            this.length = length;
-            this.width = width;
+            if (length <= 0 || width <= 0)
+            {
+                this.length = 0;
+                this.width = 0;
+            }
+            else
+            {
+                this.length = length;
+                this.width = width;
+            }
         }
 
         public double Area() { 
